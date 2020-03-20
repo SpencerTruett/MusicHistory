@@ -35,5 +35,6 @@
 --ORDER BY AlbumLength DESC;
 
 SELECT s.Title, MAX (s.SongLength) AS SongLength FROM Song s
+INNER JOIN Album al  ON s.AlbumId =al.Id
 GROUP BY s.Title
 ORDER BY SongLength DESC;
